@@ -1,0 +1,40 @@
+{
+  "name": "genSynthPerformerServer",
+  "version": "0.0.0",
+  "description": "The server for performing with GenSynth instruments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidlukerice/genSynthPerformer.git"
+  },
+  "keywords": [
+    "genSynth",
+    "performance",
+    "instrument",
+    "socket"
+  ],
+  "author": "David Rice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidlukerice/genSynthPerformer/issues"
+  },
+  "homepage": "https://github.com/davidlukerice/genSynthPerformer",
+  "dependencies": {
+    "express": "4.11.1",
+    "grunt": "0.4.5",
+    "grunt-concurrent": "1.0.0",
+    "grunt-contrib-jshint": "0.11.0",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-env": "0.4.2",
+    "grunt-mocha-test": "0.12.7",
+    "grunt-node-inspector": "0.1.5",
+    "grunt-nodemon": "0.4.0",
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "2.1.0",
+    "socket.io": "1.3.2",
+    "time-grunt": "^1.0.0"
+  }
+}
