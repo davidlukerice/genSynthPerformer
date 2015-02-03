@@ -1,17 +1,26 @@
 <h2 id="title">GenSynthPerformer</h2>
 
 
-<button {{action 'visit' 'display'}}>Display View</button>
-<button {{action 'visit' 'input'}}>Input View</button>
+<button {{action 'visit' 'display'}} class="btn">Display View</button>
+<button {{action 'visit' 'input'}} class="btn">Input View</button>
 
-<p>
-    <h3>Instruments</h3>
-    {{textarea value=instruments cols="80" rows="6"}}</br>
-    <button {{action 'updateInstruments'}}>Update Instruments</button>
-</p>
-<p>
-    <h3>words</h3>
-    {{input type="text" value=firstWord size="50"}}<br>
-    {{input type="text" value=secondWord size="50"}}</br>
-    <button {{action 'updateWords'}}>Update Words</button>
-</p>
+<div class="row">
+    <div class="col-md-12">
+        <h3>words</h3>
+        {{input type="text" value=firstWord size="50" class="form-control"}}<br>
+        {{input type="text" value=secondWord size="50" class="form-control"}}</br>
+        <button {{action 'updateWords'}} class="btn">Update Words</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Instruments <small><button {{action 'updateInstruments'}} class="btn btn-xs">Update Instruments</button></small></h3>
+        <div class="row">
+            {{#each instrument in instruments}}
+                <div class="col-md-4 col-sm-6">
+                    {{textarea value=instrument cols="80" rows="6" class="form-control"}}</br>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

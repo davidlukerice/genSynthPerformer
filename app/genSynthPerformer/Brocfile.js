@@ -2,7 +2,11 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  'ember-cli-bootstrap': {
+    'importBootstrapTheme': true
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -16,5 +20,14 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+
+app.import({
+  development: 'bower_components/lodash/lodash.js',
+  production: 'bower_components/lodash/lodash.min.js'
+});
+app.import({
+  development: 'bower_components/asNEAT/dist/asNEAT.js',
+  production: 'bower_components/asNEAT/dist/asNEAT.min.js'
+});
 
 module.exports = app.toTree();
