@@ -1,0 +1,17 @@
+<h2 id="title">GenSynthPerformer</h2>
+
+
+<button {{action 'visit' 'display'}}>Display View</button>
+<button {{action 'visit' 'input'}}>Input View</button>
+
+<p>
+    <h3>Instruments</h3>
+    {{textarea value=instruments cols="80" rows="6"}}</br>
+    <button {{action 'updateInstruments'}}>Update Instruments</button>
+</p>
+<p>
+    <h3>words</h3>
+    {{input type="text" value=firstWord size="50"}}<br>
+    {{input type="text" value=secondWord size="50"}}</br>
+    <button {{action 'updateWords'}}>Update Words</button>
+</p>

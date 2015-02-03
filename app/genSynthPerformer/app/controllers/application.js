@@ -7,13 +7,13 @@ export default Ember.Controller.extend({
   initializeSocket: function() {
     var socket = io.connect('http://localhost:3000');
     this.socket = socket;
-    socket.on('chat message', function(msg){
-      $('#messages').append($('<li>').text(msg));
-    });
+    //socket.on('chat message', function(msg){
+    //  $('#messages').append($('<li>').text(msg));
+    //});
   }.on('init'),
 
   actions: {
-    sendMessage: function() {
+    updateInstruments: function() {
       this.socket.emit('chat message', $('#m').val());
       $('#m').val('');
     }
