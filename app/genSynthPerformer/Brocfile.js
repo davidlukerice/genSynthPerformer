@@ -23,8 +23,9 @@ var app = new EmberApp({
 
 app.import({
   development: 'bower_components/lodash/lodash.js',
-  production: 'bower_components/lodash/lodash.min.js'
+  production:  'bower_components/lodash/lodash.min.js'
 });
+
 app.import({
   development: 'bower_components/asNEAT/dist/asNEAT.js',
   production: 'bower_components/asNEAT/dist/asNEAT.min.js'

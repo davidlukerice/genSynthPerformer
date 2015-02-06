@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   actions: {
     play: function(route) {
       this.get('controllers.application.socket')
-          .emit('play');;
+          .emit('play');
     }
   }
 });

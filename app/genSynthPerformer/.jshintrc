@@ -1,11 +1,11 @@
 {
-  "predef": [
-    "document",
-    "io",
-    "window",
-    "-Promise",
-    "_"
-  ],
+  "predef": {
+    "_": false,
+    "document": false,
+    "io": false,
+    "window": false,
+    "-Promise": false
+  },
   "browser": true,
   "boss": true,
   "curly": true,

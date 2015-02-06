@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <h3>words <small><button {{action 'updateWords'}} class="btn btn-xs">Update Words</button></small></h3>
         {{#each word in model.words}}
-            {{input type="text" value=word size="50" class="form-control"}}<br>
+            {{input type="text" value=word.text size="50" class="form-control"}}<br>
         {{/each}}
     </div>
 </div>
