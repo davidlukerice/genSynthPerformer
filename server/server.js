@@ -8,15 +8,41 @@ app.get('/', function(req, res){
 });
 */
 
+var model = {
+  instruments: null,
+  words: null
+};
+
 io.on('connection', function(socket){
   console.log('a user connected');
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
 
-  socket.on('chat message', function(msg){
-    console.log('msg: '+msg);
-    io.emit('chat message', msg);
+  socket.on('getCurrentInstruments', function() {
+    console.log('getting current instruments', model.instruments);
+    io.emit('getCurrentInstrumentsResponse', model.instruments);
+  });
+  socket.on('getCurrentWords', function() {
+    console.log('geting current words', model.words);
+    io.emit('getCurrentWordsResponse', model.words);
+  });
+
+  socket.on('updateInstruments', function(instruments){
+    console.log('updating instruments', instruments);
+    model.instruments = instruments;
+    io.emit('updateInstruments', instruments);
+  });
+
+  socket.on('updateWords', function(words) {
+    console.log('updating words', words);
+    model.words = words;
+    io.emit('updateWords', words);
+  });
+
+  socket.on('play', function() {
+    console.log('play');
+    io.emit('play');
   });
 });
 
