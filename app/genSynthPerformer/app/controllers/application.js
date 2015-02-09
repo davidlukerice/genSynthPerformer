@@ -41,11 +41,10 @@ export default Ember.Controller.extend({
       var storedWords = self.get('model.words');
       storedWords.clear();
       _.forEach(words, function(word) {
-        words.pushObject(Ember.Object.create({
+        storedWords.pushObject(Ember.Object.create({
           text:word.text
         }));
       });
-      //self.set('model.words', Ember.A(words));
     });
 
     socket.on('updateInstruments', function(instruments){
