@@ -1,6 +1,7 @@
 <h2>Display View</h2>
 <div class="row">
-    <h3>Current Words<h3>
+    <h3>State: {{currentState}}</h3>
+    <h3>Current Words</h3>
     {{#each word in model.words}}
         <h4>{{word.text}}</h4>
     {{/each}}

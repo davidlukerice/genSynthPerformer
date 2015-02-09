@@ -8,6 +8,14 @@ export default Ember.Controller.extend({
     play: function(route) {
       this.get('controllers.application.socket')
           .emit('play');
+    },
+    startSequence: function() {
+      this.get('controllers.application.socket')
+          .emit('startSequence');
+    },
+    stopSequence: function() {
+      this.get('controllers.application.socket')
+          .emit('stopSequence');
     }
   }
 });

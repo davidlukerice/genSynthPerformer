@@ -44,6 +44,16 @@ io.on('connection', function(socket){
     console.log('play');
     io.emit('play');
   });
+
+  socket.on('startSequence', function() {
+    console.log('startSequence');
+    io.emit('startSequence');
+  });
+
+  socket.on('stopSequence', function() {
+    console.log('stopSequence');
+    io.emit('stopSequence');
+  });
 });
 
 http.listen(3000, function(){
